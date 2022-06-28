@@ -1,0 +1,14 @@
+.outer{
+    width: 15rem;
+    height: 1rem;
+    background-color: #eee;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.inner{
+    background-color: crimson;
+    width: 5rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+}

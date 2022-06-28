@@ -1,0 +1,30 @@
+.opponents-container{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.vs{
+    background-color: white;;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.pokemon{
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    left: -1rem;
+}
+
+.pokemon-left{
+    
+}
+
+.pokemon-right{
+
+}
