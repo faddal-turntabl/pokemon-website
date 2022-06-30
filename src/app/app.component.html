@@ -12,11 +12,12 @@
     <img src="../assets/arena.png" alt="arena">
 
     <div class="search-fields">
-      <input type="text" placeholder="select pokemon 1" #pokemon1 (keyup.enter) = "displayPokemonStats(pokemon1.value)" />
-      <input type="text" placeholder="select pokemon 2" #pokemon2 (keyup.enter) = "displayPokemonStats(pokemon2.value)"/>
+      <input type="text" placeholder="select pokemon 1" #pokemon1 (keyup.enter) = "displayPokemonStats(pokemon1.value, 1)" />
+      <input type="text" placeholder="select pokemon 2" #pokemon2 (keyup.enter) = "displayPokemonStats(pokemon2.value, 2)"/>
     </div>
-    <app-pokemon [pokemonName] = "name"></app-pokemon>
-    <app-opponents></app-opponents>
+    <app-pokemon [pokemonName] = "name" [pokemonHp] = "hp" [pokemonAttack] = "attack" [pokemonDefence] = "defence"></app-pokemon>
+    <br>
+    <!-- <<app-pokemon [pokemonName2] = "name" [pokemonHp2] = "hp" [pokemonAttack2] = "attack" [pokemonDefence2] = "defence"></app-pokemon> -->
 
   </div>
 

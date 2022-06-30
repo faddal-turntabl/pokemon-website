@@ -16,6 +16,15 @@ export class PokemonComponent implements OnInit {
   }
 
   @Input() public pokemonName: any;
+  @Input() public pokemonHp: any;
+  @Input() public pokemonAttack: any;
+  @Input() public pokemonDefence: any;
+
+  @Input() public pokemonName2: any;
+  @Input() public pokemonHp2: any;
+  @Input() public pokemonAttack2: any;
+  @Input() public pokemonDefence2: any;
+
   
   public searchEvent = new EventEmitter();
   public pokemonInfo:Pokemon[] = [];

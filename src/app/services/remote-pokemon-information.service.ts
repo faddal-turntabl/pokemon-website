@@ -12,9 +12,9 @@ export class RemotePokemonInformationService {
 
   private pokeApiUrl = "https://pokeapi.co/api/v2/pokemon/";
 
-  getPokemonData(pokemonName:string): Observable<Pokemon[]> {
-    let pokemonData = this.http.get<Pokemon[]>(this.buildURL(pokemonName));
-    //console.log(pokemonData);
+  getPokemonData(pokemonName:string) {
+    let pokemonData = this.http.get<any>(this.buildURL(pokemonName));
+    console.log(pokemonData);
     return pokemonData;
   }
 
