@@ -33,3 +33,24 @@
     border-radius: 2rem;
     transition: all 2s linear;
 }
+
+.fight{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    padding: 1rem;
+    width: 10rem;
+    color: white;
+    background-color: brown;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    
+}
+
+.fight:hover{
+    background-color: white;
+    color: #333;
+}
