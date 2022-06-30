@@ -5,9 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pokemon.component.html',
   styleUrls: ['./pokemon.component.css']
 })
+
 export class PokemonComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

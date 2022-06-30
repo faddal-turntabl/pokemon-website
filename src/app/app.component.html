@@ -8,15 +8,18 @@
 </head>
 <body>
   <div class="header-arena">
-    <app-header class="header"></app-header>
+    <h1 class="header">Poke Battles</h1>
     <img src="../assets/arena.png" alt="arena">
 
     <div class="search-fields">
-      <input type="text" placeholder="select pokemon 1">
-      <input type="text" placeholder="select pokemon 2">
+      <input type="text" placeholder="select pokemon 1" #pokemon1/>
+      <button (click) = "displayPokemonStats(pokemon1.value)">search</button>
+      <input type="text" placeholder="select pokemon 2" #pokemon2/>
+      <button (click) = "displayPokemonStats(pokemon2.value)">search</button>
     </div>
 
-    <app-opponents></app-opponents>
+    <app-opponents [title]="title"></app-opponents>
+
   </div>
 
   <app-stats-meter></app-stats-meter>
