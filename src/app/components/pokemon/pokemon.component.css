@@ -16,3 +16,7 @@
 .vs{
     position: absolute;
 }
+
+meter{
+    width: 18rem;
+}
