@@ -12,10 +12,8 @@
     <img src="../assets/arena.png" alt="arena">
 
     <div class="search-fields">
-      <input type="text" placeholder="select pokemon 1" #pokemon1/>
-      <button (click) = "displayPokemonStats(pokemon1.value)">search</button>
-      <input type="text" placeholder="select pokemon 2" #pokemon2/>
-      <button (click) = "displayPokemonStats(pokemon2.value)">search</button>
+      <input type="text" placeholder="select pokemon 1" #pokemon1 (keyup.enter) = "displayPokemonStats(pokemon1.value)"/>
+      <input type="text" placeholder="select pokemon 2" #pokemon2 (keyup.enter) = "displayPokemonStats(pokemon2.value)"/>
     </div>
 
     <app-opponents [title]="title"></app-opponents>

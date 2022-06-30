@@ -17,7 +17,6 @@ export class PokemonInformationService {
       {name: "Machamp", attack: 130, defence: 80,  HP: 90},
     ]
     return pokemons;
-
   }
 
   
