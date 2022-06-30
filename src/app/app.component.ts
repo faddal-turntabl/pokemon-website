@@ -52,7 +52,7 @@ export class AppComponent {
 
   displayPokemonStats(searchedName:string, searchNumber:Number): void {
     
-    this.remotePokemonInformation.getPokemonData(searchedName).subscribe(data => {
+    this.remotePokemonInformation.getPokemonData(searchedName.toLowerCase()).subscribe(data => {
       
         if (searchNumber == 1) {
           this.pokemonHp = data.stats[0].base_stat;
@@ -89,11 +89,12 @@ export class AppComponent {
     
   }
 
+  winner:string = "";
   
   determineWinner() {
 
     if (!this.selectFighters[0] || !this.selectFighters[1]) {
-      alert("No pokemon selected");
+      alert("Select all pokemon!");
       return;
     }
 
