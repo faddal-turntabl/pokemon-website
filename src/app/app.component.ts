@@ -22,13 +22,13 @@ export class AppComponent {
   public hp:Number = 0;
   public attack:Number = 0;
   public defence:Number = 0;
-  public image:any = "https://paintingvalley.com/sketches/spartan-helmet-sketch-1.png";
+  public image:any = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freeiconspng.com%2Fuploads%2Fpokeball-pokemon-ball-hd-images-free-png-31.png&f=1&nofb=1";
 
   public name2 = "";
   public hp2:Number = 0;
   public attack2:Number = 0;
   public defence2:Number = 0;
-  public image2:any = "https://paintingvalley.com/sketches/spartan-helmet-sketch-1.png";
+  public image2:any = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freeiconspng.com%2Fuploads%2Fpokeball-pokemon-ball-hd-images-free-png-31.png&f=1&nofb=1";
 
   ngOnInit() {
     //this.remotePokemonInformation.getPokemonData(this.name).subscribe(data => console.log(data))
@@ -39,13 +39,13 @@ export class AppComponent {
   pokemonHp = 0;
   pokemonAttack = 0;
   pokemonDefence = 0;
-  pokemonImage = "https://paintingvalley.com/sketches/spartan-helmet-sketch-1.png";
+  pokemonImage = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freeiconspng.com%2Fuploads%2Fpokeball-pokemon-ball-hd-images-free-png-31.png&f=1&nofb=1";
 
   pokemonName2 = "";
   pokemonHp2 = 0;
   pokemonAttack2 = 0;
   pokemonDefence2 = 0;
-  pokemonImage2 = "https://paintingvalley.com/sketches/spartan-helmet-sketch-1.png";
+  pokemonImage2 = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freeiconspng.com%2Fuploads%2Fpokeball-pokemon-ball-hd-images-free-png-31.png&f=1&nofb=1";
 
   selectFighters = [false,false];
   
@@ -97,8 +97,6 @@ export class AppComponent {
       alert("Select all pokemon!");
       return;
     }
-
-    let winner = "";
     
     // if ((healthPikachu * defencePikachu) / attackCharizard < (healthCharizard * defenceCharizard) / attackPikachu) {
     //   then Charizard wins
@@ -110,13 +108,13 @@ export class AppComponent {
     
 
     if ((this.pokemonHp * this.pokemonDefence) / this.pokemonAttack2 < (this.pokemonHp2 * this.pokemonDefence2) / this.pokemonAttack2) {
-      winner = this.pokemonName2 + " wins";
+      this.winner = this.pokemonName2 + " wins";
     }
     else if ((this.pokemonHp * this.pokemonDefence) / this.pokemonAttack2 > (this.pokemonHp2 * this.pokemonDefence2) / this.pokemonAttack2) {
-      winner = this.pokemonName + " wins";
+      this.winner = this.pokemonName + " wins";
     }
-    else winner = "Draw";
-    console.log(winner);
+    else this.winner = "Draw";
+    console.log(this.winner);
   }
   
 

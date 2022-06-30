@@ -54,3 +54,11 @@
     background-color: white;
     color: #333;
 }
+
+.winner{
+
+    position: absolute;
+    top: 30%;
+    left: 39%;
+    font-size: 300%;
+}

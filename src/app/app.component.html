@@ -14,6 +14,7 @@
       <input type="text" placeholder="select pokemon 1" #pokemon1 (keyup.enter) = "displayPokemonStats(pokemon1.value, 1)" />
       <input type="text" placeholder="select pokemon 2" #pokemon2 (keyup.enter) = "displayPokemonStats(pokemon2.value, 2)"/>
     </div>
+    
   </div>
 
   <div>
@@ -23,6 +24,7 @@
     <app-pokemon [pokemonName] = "name" [pokemonHp] = "hp" [pokemonAttack] = "attack" [pokemonDefence] = "defence" [pokemonImage] = "image"
     [pokemonName2] = "name2" [pokemonHp2] = "hp2" [pokemonAttack2] = "attack2" [pokemonDefence2] = "defence2" [pokemonImage2] = "image2"></app-pokemon>
     <br>
+    <h2 class="winner">{{winner}}</h2>
     <button class="fight" (click) = "determineWinner()">Fight</button>
     
   </div>
