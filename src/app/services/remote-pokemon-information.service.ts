@@ -14,7 +14,7 @@ export class RemotePokemonInformationService {
 
   getPokemonData(pokemonName:string): Observable<Pokemon[]> {
     let pokemonData = this.http.get<Pokemon[]>(this.buildURL(pokemonName));
-    console.log(pokemonData);
+    //console.log(pokemonData);
     return pokemonData;
   }
 

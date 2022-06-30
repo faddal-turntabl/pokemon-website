@@ -21,10 +21,12 @@ export class PokemonComponent implements OnInit {
   public pokemonInfo:Pokemon[] = [];
 
   ngOnInit(): void {
-    this.remotePokemonInformation.getPokemonData("pikachu").subscribe(data => this.pokemonInfo = data);
-    
-    
+    //this.remotePokemonInformation.getPokemonData("pikachu").subscribe(data => console.log(data));
     //console.log(this.pokemonInfo);
+  }
+
+  getSearchedPokeData() {
+    this.remotePokemonInformation.getPokemonData(this.pokemonName).subscribe(data => this.pokemonInfo = data);
   }
 
 }

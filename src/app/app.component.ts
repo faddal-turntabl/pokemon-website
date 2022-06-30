@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Pokemon } from './model/pokemon.model';
-import { PokemonInformationService } from './services/pokemon-information.service';
+import { RemotePokemonInformationService } from 'src/app/services/remote-pokemon-information.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ import { PokemonInformationService } from './services/pokemon-information.servic
 
 
 export class AppComponent {
-  constructor(private PokemonInformation: PokemonInformationService) {
+  constructor(private remotePokemonInformation: RemotePokemonInformationService) {
 
   }
 
@@ -20,20 +20,14 @@ export class AppComponent {
   public name = "";
 
   ngOnInit() {
-    this.pokemonData = this.PokemonInformation.getPokemon();
-    console.log(this.pokemonData);
+    //this.remotePokemonInformation.getPokemonData(this.name).subscribe(data => console.log(data))
+    //console.log(this.pokemonData);
   }
 
   displayPokemonStats(searchedName:string): void {
-    let pokemon = this.pokemonData.filter(p => p.name.toLowerCase() === searchedName.toLowerCase());
-    console.log(pokemon[0]);
-  }
-
-  setName(searchedName:string): void{
     this.name = searchedName;
+    this.remotePokemonInformation.getPokemonData(this.name).subscribe(data => console.log(data))
   }
- 
-  title = 'pokemon-website';
 
 
 }
