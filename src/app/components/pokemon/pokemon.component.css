@@ -1,0 +1,11 @@
+.pokemon-display{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    top: -20rem;
+}
+
+.pokemon-display img{
+    margin-bottom: 3rem;
+}

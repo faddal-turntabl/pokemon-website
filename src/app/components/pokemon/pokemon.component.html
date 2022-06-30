@@ -1,20 +1,34 @@
-<p>Name: {{pokemonName}}</p>
-<p>HP: {{pokemonHp}} </p>
-<meter value={{pokemonHp}} min="0" max="200"></meter>
 
-<p>Attack: {{pokemonAttack}}</p>
-<meter value={{pokemonAttack}} min="0" max="200"></meter>
+<div class="pokemon-display">
+    <div>
+        <p>Name: {{pokemonName}}</p>
+        <p>HP: {{pokemonHp}} </p>
+        <meter value={{pokemonHp}} min="0" max="200"></meter>
+        
+        <p>Attack: {{pokemonAttack}}</p>
+        <meter value={{pokemonAttack}} min="0" max="200"></meter>
+        
+        <p>Defence: {{pokemonDefence}}</p>
+        <meter value={{pokemonDefence}} min="0" max="200"></meter>
+        <br>
+        <br>
+        <img src={{pokemonImage}} alt={image} width="100px"/>
+    </div>
 
-<p>Defence: {{pokemonDefence}}</p>
-<meter value={{pokemonDefence}} min="0" max="200"></meter>
-<br>
-<br>
+    <div>
+        <br>
+        <p>Name: {{pokemonName2}}</p>
+        <p>HP: {{pokemonHp2}} </p>
+        <meter value={{pokemonHp2}} min="0" max="200"></meter>
+        <p>Attack: {{pokemonAttack2}}</p>
+        <meter value={{pokemonAttack2}} min="0" max="200"></meter>
+        <p>Defence: {{pokemonDefence2}}</p>
+        <meter value={{pokemonDefence2}} min="0" max="200"></meter>
+        <br>
+        <br>
+        <img src={{pokemonImage2}} alt={image2} width="100px"/>
+    </div>
 
-<p>Name: {{pokemonName2}}</p>
-<p>HP: {{pokemonHp2}} </p>
-<meter value={{pokemonHp2}} min="0" max="200"></meter>
-<p>Attack: {{pokemonAttack2}}</p>
-<meter value={{pokemonAttack2}} min="0" max="200"></meter>
-<p>Defence: {{pokemonDefence2}}</p>
-<meter value={{pokemonDefence2}} min="0" max="200"></meter>
+</div>
+
 

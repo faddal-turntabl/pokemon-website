@@ -19,12 +19,13 @@ export class PokemonComponent implements OnInit {
   @Input() public pokemonHp: any;
   @Input() public pokemonAttack: any;
   @Input() public pokemonDefence: any;
+  @Input() public pokemonImage: any;
 
   @Input() public pokemonName2: any;
   @Input() public pokemonHp2: any;
   @Input() public pokemonAttack2: any;
   @Input() public pokemonDefence2: any;
-
+  @Input() public pokemonImage2: any;
   
   public searchEvent = new EventEmitter();
   public pokemonInfo:Pokemon[] = [];
@@ -36,6 +37,34 @@ export class PokemonComponent implements OnInit {
 
   getSearchedPokeData() {
     this.remotePokemonInformation.getPokemonData(this.pokemonName).subscribe(data => this.pokemonInfo = data);
+  }
+
+  determineWinner() {
+
+    if (false) {
+      alert("No pokemon selected");
+      return;
+    }
+
+    let winner = "";
+    /*
+    if ((healthPikachu * defencePikachu) / attackCharizard < (healthCharizard * defenceCharizard) / attackPikachu) {
+      then Charizard wins
+    }
+    else if ((healthPikachu * defencePikachu) / attackCharizard > (healthCharizard * defenceCharizard) / attackPikachu) {
+      then Pikachu wins
+    }
+    else Draw
+    */
+
+    if ((this.pokemonHp * this.pokemonDefence) / this.pokemonAttack2 < (this.pokemonHp2 * this.pokemonDefence2) / this.pokemonAttack2) {
+      winner = this.pokemonName2;
+    }
+    else if ((this.pokemonHp * this.pokemonDefence) / this.pokemonAttack2 > (this.pokemonHp2 * this.pokemonDefence2) / this.pokemonAttack2) {
+      winner = this.pokemonName;
+    }
+    else winner = "Draw";
+    console.log(winner);
   }
   
 
