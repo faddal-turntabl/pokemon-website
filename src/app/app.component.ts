@@ -34,14 +34,14 @@ export class AppComponent {
   }
 
   pokemonName = "";
-  pokemonHp = 0;
-  pokemonAttack = 0;
-  pokemonDefence = 0;
+  pokemonHp = 5;
+  pokemonAttack = 5;
+  pokemonDefence = 5;
 
   pokemonName2 = "";
-  pokemonHp2 = 100;
-  pokemonAttack2 = 100;
-  pokemonDefence2 = 100;
+  pokemonHp2 = 5;
+  pokemonAttack2 = 5;
+  pokemonDefence2 = 5;
   
 
   displayPokemonStats(searchedName:string, searchNumber:Number): void {
@@ -69,6 +69,28 @@ export class AppComponent {
     });
     //console.log("Health: " + this.pokemonHp);
     
+  }
+
+  determineWinner() {
+    let winner = "";
+    /*
+    if ((healthPikachu * defencePikachu) / attackCharizard < (healthCharizard * defenceCharizard) / attackPikachu) {
+      then Charizard wins
+    }
+    else if ((healthPikachu * defencePikachu) / attackCharizard > (healthCharizard * defenceCharizard) / attackPikachu) {
+      then Pikachu wins
+    }
+    else Draw
+    */
+
+    if ((this.pokemonHp * this.pokemonDefence) / this.pokemonAttack2 < (this.pokemonHp2 * this.pokemonDefence2) / this.pokemonAttack2) {
+      winner = this.pokemonName2;
+    }
+    else if ((this.pokemonHp * this.pokemonDefence) / this.pokemonAttack2 > (this.pokemonHp2 * this.pokemonDefence2) / this.pokemonAttack2) {
+      winner = this.pokemonName;
+    }
+    else winner = "Draw";
+    console.log(winner);
   }
 
 

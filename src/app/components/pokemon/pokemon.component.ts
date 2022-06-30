@@ -37,5 +37,8 @@ export class PokemonComponent implements OnInit {
   getSearchedPokeData() {
     this.remotePokemonInformation.getPokemonData(this.pokemonName).subscribe(data => this.pokemonInfo = data);
   }
+  
+
+  
 
 }
