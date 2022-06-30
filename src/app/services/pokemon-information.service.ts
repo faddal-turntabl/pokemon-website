@@ -9,6 +9,7 @@ export class PokemonInformationService {
 
   constructor() { }
 
+
   getPokemon() {
     let pokemons:Pokemon[] = [
       {name: "Charizard", attack: 84, defence: 78,  HP: 78},
@@ -18,6 +19,8 @@ export class PokemonInformationService {
     ]
     return pokemons;
   }
+
+
 
   
   

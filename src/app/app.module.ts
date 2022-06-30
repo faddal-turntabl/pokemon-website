@@ -6,6 +6,7 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { StatsMeterComponent } from './components/stats-meter/stats-meter.component';
 import { OpponentsComponent } from './components/opponents/opponents.component';
 import { PokemonInformationService } from './services/pokemon-information.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PokemonInformationService } from './services/pokemon-information.servic
     OpponentsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [PokemonInformationService],
   bootstrap: [AppComponent]

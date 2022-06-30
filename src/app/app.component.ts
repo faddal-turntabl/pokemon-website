@@ -17,6 +17,8 @@ export class AppComponent {
 
   pokemonData:Pokemon[] = [];
 
+  public name = "";
+
   ngOnInit() {
     this.pokemonData = this.PokemonInformation.getPokemon();
     console.log(this.pokemonData);
@@ -25,6 +27,10 @@ export class AppComponent {
   displayPokemonStats(searchedName:string): void {
     let pokemon = this.pokemonData.filter(p => p.name.toLowerCase() === searchedName.toLowerCase());
     console.log(pokemon[0]);
+  }
+
+  setName(searchedName:string): void{
+    this.name = searchedName;
   }
  
   title = 'pokemon-website';

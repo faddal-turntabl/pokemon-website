@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { waitForAsync } from '@angular/core/testing';
+import { Pokemon } from 'src/app/model/pokemon.model';
+import { RemotePokemonInformationService } from 'src/app/services/remote-pokemon-information.service';
 
 @Component({
   selector: 'app-pokemon',
@@ -8,10 +11,20 @@ import { Component, OnInit } from '@angular/core';
 
 export class PokemonComponent implements OnInit {
 
-  constructor() {
+  constructor(private remotePokemonInformation : RemotePokemonInformationService) {
+
   }
 
+  @Input() public pokemonName: any;
+  
+  public searchEvent = new EventEmitter();
+  public pokemonInfo:Pokemon[] = [];
+
   ngOnInit(): void {
+    this.remotePokemonInformation.getPokemonData("pikachu").subscribe(data => this.pokemonInfo = data);
+    
+    
+    //console.log(this.pokemonInfo);
   }
 
 }
