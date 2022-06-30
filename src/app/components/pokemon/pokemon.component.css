@@ -2,10 +2,17 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    position: relative;
-    top: -20rem;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    /* position: relative; */
+    /* top: -20rem; */
 }
 
 .pokemon-display img{
-    margin-bottom: 3rem;
+    margin: 3rem 0;
+}
+
+.vs{
+    position: absolute;
 }
